@@ -16,7 +16,7 @@ exports.handler = async function(event, context) {
   };
 
   try {
-    const response = await axios.post('https://api.openai.com/v1/engines/davinci-codex/completions', data, {
+    const response = await axios.post('https://api.openai.com/v1/chat/completions', data, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
