@@ -1,49 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Agency</title>
+    <title>Radical Standard | Driving Productivity Through AI</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <meta charSet="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header class="hero">
-        <h1>Welcome to the AI Revolution</h1>
-        <p>Transforming Your Business for the Future</p>
-        <button class="cta">Contact Us</button>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="images/logo.svg" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+          <div class="hamburger"></div>
+        </div>
+        <ul class="menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="https://calendly.com" target="_blank" class="cta">Book a Call</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero" id="hero">
+        <img src="images/astronaut.png">
+        <h1>Welcome to the <span class="highlight">AI Revolution</span></h1>
+        <p>Bringing Your Business Into The Future</p>
+        <div class="spacer-40"></div>
+        <a href="https://calendly.com" target="_blank" class="cta">Book A Call Today To Transform Your Operations →</a>
     </header>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="service">
-            <img src="discover.png" alt="Discover">
-            <h3>Discover</h3>
-            <p>Uncover New Opportunities for Efficiency and Growth</p>
+            <img src="images/satellite1.png" alt="Discovery">
+            <h3>Discovery</h3>
+            <p>We'll audit your current processes & data management practices. Together, we'll uncover new opportunities for efficiency and growth.</p>
+            <a href="https://calendly.com" target="_blank" class="secondary-cta">Work with us →</a>
         </div>
-        <!-- More service divs here -->
+        <div class="service">
+            <img src="images/satellite2.png" alt="Optimization">
+            <h3>Optimization</h3>
+            <p>We'll help you streamline your operations, reduce costs, and boost efficiency.</p>
+            <a href="https://calendly.com" target="_blank" class="secondary-cta">Work with us →</a>
+        </div>
+        <div class="service">
+            <img src="images/satellite3.png" alt="Discover">
+            <h3>Customization</h3>
+            <p>Our specialty is developing tailored AI solutions for your specific challenges & objectives.</p>
+            <a href="https://calendly.com" target="_blank" class="secondary-cta">Work with us →</a>
+        </div>
+        <div class="service">
+            <img src="images/satellite4.png" alt="Discover">
+            <h3>AI Masterclass</h3>
+            <p>Our comprehensive training program is designed to turn your key team members into AI virtuosos.</p>
+            <a href="https://calendly.com" target="_blank" class="secondary-cta">Work with us →</a>
+        </div>
+    </section>
+
+    <h2 class="cta-heading">We're experienced builders</h2>
+
+    <section class="work" id="work">
+        <div class="example main-example">
+            <div class="image-column">
+              <img src="images/fb-ads.png" alt="FB Ads Model">
+            </div>
+            <div class="text-column">
+              <h3>A Crystal Ball for Facebook Ads</h3>
+              <p>Can you imagine knowing how your Facebook Ads will perform before you even hit "publish"?</p><p>We built a custom computer vision pipeline that mines historical campaign performance to predict how new ads will do based on visual style and components, taking the guesswork out of campaign creation.</p><p>The result for our client? More bang for their advertising buck and a serious edge over the competition.</p>
+            </div>
+        </div>
+        <div class="example">
+            <img src="images/astronaut-support.png" alt="Astronauts helping each other" class="small-image">
+            <h3>Always-on Customer Service</h3>
+            <p>What if your e-commerce store could cater to customers 24/7 without breaking a sweat? We've turned this vision into reality by building an all-knowing customer service and sales chatbot that knows the store's offerings like its own source code. The cherry on top? A 50% cut in customer support costs for our client and a 7.5% increase in sales.</p>
+        </div>
+        <div class="example">
+            <img src="images/astronaut-sales.png" alt="Astronaut prospecting" class="small-image">
+            <h3>Sales prospecting on easy mode</h3>
+            <p>We 10x'd our client's sales team's efficiency and cut costs by 85% with a sales prospecting tool that works around the clock, visiting leads' websites and writing personalized emails. The result for our client? A 25% boost in reply rates, thanks to those spot-on personalizations.</p>
+        </div>
+        <div class="spacer-40"></div>
     </section>
 
     <section class="chat">
+        <div class="section-heading">
+            <h2 class="cta-heading">Questions?</h2>
+            <p class="subheader">Our GPT-Powered Chatbot Has All the Answers</p>
+        </div>
         <div id="chat-container">
             <div id="chat-log"></div>
-            <input type="text" id="user-input" placeholder="Type your message..." autofocus>
-            <button id="send-button">Send</button>
+            <div id="user-input-container">
+                <div id="user-input" contenteditable="true"></div>
+                <button id="send-button" aria-label="Send">
+                <!-- Replace this with your SVG icon code -->
+                <img src="images/send.svg" id="button-icon">
+              </button>
+            </div>            
         </div>
+        <script src="chatbot.js"></script>
+        <div class="spacer-40"></div>
     </section>
-
-    <h2 class="cta-heading">Ready to Transform Your Business?</h2>
-
-    <section class="work">
-        <div class="example">
-            <img src="example1.png" alt="Example 1">
-            <h3>Project 1</h3>
-            <p>Description of Project 1</p>
-        </div>
-        <!-- More example divs here -->
-    </section>
-
-    <h2 class="cta-heading">Impressed by Our Work?</h2>
 
     <footer>
-        <p>Contact Information Here</p>
+        <a href="https://calendly.com" target="_blank" class="cta">Book A Call Today To Transform Your Operations →</a>
+        <div class="spacer-40"></div>
+        <a href="#hero" id="back-to-top"><img src="images/rocketship.jpg"></a>
+        <div class="spacer-40"></div>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
