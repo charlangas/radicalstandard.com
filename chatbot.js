@@ -126,7 +126,7 @@ function handleUserInput() {
     sendMessage(message);
   } else {
     sendButton.disabled = true; // Disable the send button
-    displayMessage(`I'm sorry, I can't answer any more questions today. If you want to learn more about Radical Standard, please <a href="https://calendly.com/your-calendar-link" class="chat-link">📅 schedule a meeting now</a> or <a href="mailto:carlos@radicalstandard.com" class="chat-link">✉️ email us</a>`, 'assistant');
+    displayMessage(`I'm sorry, I can't answer any more questions today. If you want to learn more about Radical Standard, please <a href="https://calendly.com/d/z5s-23d-gkb/30min" class="chat-link">📅 schedule a meeting now</a> or <a href="mailto:carlos@radicalstandard.com" class="chat-link">✉️ email us</a>`, 'assistant');
   }
 
   // Reset the height of the user input box
