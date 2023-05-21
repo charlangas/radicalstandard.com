@@ -23,7 +23,7 @@ exports.handler = async function(event, context) {
   },
 });
 
-    const completion = response.data.choices[0].text.trim();
+    const completion = response.data['choices'][0]['message']['content'].trim();
     return { statusCode: 200, body: JSON.stringify({ message: completion }) };
   } catch (error) {
     console.log(error);
