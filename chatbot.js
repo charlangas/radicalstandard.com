@@ -115,38 +115,34 @@ function canSendMessage() {
   return false;
 }
 
-// Event listener for the Enter key
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && document.activeElement === document.getElementById('user-input')) {
-    event.preventDefault();
-    handleUserInput();
-  }
-});
-
 // Function to handle user input
 function handleUserInput() {
   const userInput = document.getElementById('user-input');
-  const message = userInput.value.trim();
+  const message = userInput.textContent.trim();
   const sendButton = document.getElementById('send-button');
 
   if (message !== '' && canSendMessage()) {
-    userInput.value = '';
+    userInput.textContent = '';
     sendMessage(message);
   } else {
     sendButton.disabled = true; // Disable the send button
     displayMessage(`I'm sorry, I can't answer any more questions today. If you want to learn more about Radical Standard, please <a href="https://calendly.com/your-calendar-link" class="chat-link">📅 schedule a meeting now</a> or <a href="mailto:carlos@radicalstandard.com" class="chat-link">✉️ email us</a>`, 'assistant');
   }
+
+  // Reset the height of the user input box
+  userInput.style.height = 'auto';
 }
 
-// Event listener for the user input field
-document.getElementById('user-input').addEventListener('input', () => {
-  const sendButton = document.getElementById('send-button');
 
-  if (canSendMessage()) {
-    sendButton.disabled = false; // Enable the send button
-  } else {
-    sendButton.disabled = true; // Disable the send button
+// Event listener for the send button
+document.getElementById('send-button').addEventListener('click', handleUserInput);
+
+// Event listener for the Enter key
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    handleUserInput();
   }
+});
 });
 
 
