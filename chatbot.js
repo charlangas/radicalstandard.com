@@ -143,15 +143,9 @@ document.addEventListener('keydown', (event) => {
     handleUserInput();
   }
 });
-});
-
-
-// Event listener for the send button
-document.getElementById('send-button').addEventListener('click', handleUserInput);
 
 /*
 FEATURES TO ADD
 - Add suggested messages to the bottom of the chat so that users can click on them instead of typing
 - Allow user to book a call through the same interface?
 */
-
