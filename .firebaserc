@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "radical-standard"
-  }
+    "default": "radical-standard",
+    "rs": "radical-standard"
+  },
+  "targets": {},
+  "etags": {}
 }
