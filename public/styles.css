@@ -1,7 +1,7 @@
 /* ---------- GLOBAL STYLES ---------- */
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: Merriweather,serif;
     letter-spacing: .03em;
     margin: 0;
     padding: 0;
@@ -12,23 +12,12 @@ body {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    text-align: left;
-    padding: 100px 7%;
-}
-
-.hero a {
-  text-align: center;
-}
-
-.hero-container {
-  grid-column: 1;
-  grid-row:1;
+    text-align: center;
+    padding: 100px 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Manrope',sans-serif;
+    font-family: Manrope,sans-serif;
     color: #073d1e;
 }
 
@@ -46,13 +35,6 @@ h1 {
 
 .hero img {
     max-height: 200px;
-    justify-self: center;
-    align-self: center;
-    grid-column: 2;
-}
-
-.hero h1 {
-  line-height: 1.2em;
 }
 
 h2 {
@@ -61,12 +43,7 @@ h2 {
 
 h3 {
     font-size: 1.6em;
-    color: #2d5245;
-}
-
-h4 {
-  text-transform: uppercase;
-  color: #01d98b;
+    color: #01d98b;
 }
 
 .cta {
@@ -127,21 +104,6 @@ h4 {
 
 .spacer-80 {
     height: 80px;
-}
-
-.steps {
-  font-weight: 800;
-  font-size: 1.8em;
-}
-
-.underline {
-  padding:0;
-  box-shadow: inset 0 -.5em #c2ff00;
-}
-
-.white-underline {
-  padding:0;
-  box-shadow: inset 0 -.5em #fff;
 }
 
 footer {
@@ -280,12 +242,135 @@ footer img {
     margin-top: 0;
 }
 
-.work-with-us {
-  row-gap: 1px;
-}
-
 .section-heading {
     text-align: center;
+}
+
+/* ---------- CHATBOT ---------- */
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chat-container {
+  margin: 0 auto;
+  background: rgb(255,255,255,0.25);
+  box-shadow: rgba(166,204,133, .2) 0px 0px 15px 0px;
+  border-radius: 1em;
+  padding: 1em;
+  width: 66%; /* Adjust the width as needed */
+  letter-spacing: 0.025em;
+  font-family: 'Merriweather', serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-log {
+  height: 400px;
+  overflow-y: scroll;
+  border-radius: 4px;
+  padding: 0px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.chat-link {
+  color: #fff;
+  background-color: #2A6041;
+  border-radius: 6px;
+  padding: 4px 6px;
+  text-decoration: none;
+  line-height: 2em;
+  font-family: 'Manrope', sans-serif;
+}
+
+#user-input {
+  flex-grow: 1;
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+#user-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#send-button {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255, 0);
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+#button-icon {
+    height: 18px;
+}
+
+.message-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.message-bubble {
+  display: inline-block;
+  padding: 15px;
+  background-color: #e6f3ff;
+  color: #000;
+  line-height: 1.3em;
+  max-width: 80%;
+}
+
+.message-bubble.user {
+  background-color: #fff;
+  color: #073D1E;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 12px 12px 0 12px;
+}
+
+.message-bubble.assistant {
+  background-color: rgba(255,255,255, .35);
+  box-shadow: rgba(166,204,133, .4) 0px 0px 10px 0px;
+  color: #073D1E;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: auto;
+  border-radius: 12px 12px 12px 0;
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes typing {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* ---------- MEDIA QUERIES ---------- */
@@ -316,23 +401,6 @@ footer img {
 
     #chat-container {
         width: 100%;
-    }
-
-    .hero {
-      grid-template-columns: 1fr;
-    }
-
-    .hero img {
-      grid-column-start: auto;
-    }
-
-    .hero-container {
-      grid-column-start: auto;
-      grid-row-start: auto;
-    }
-
-    .spacer-80 {
-      height: 40px;
     }
 
     .menu {
