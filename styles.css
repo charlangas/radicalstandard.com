@@ -116,13 +116,37 @@ body {
     margin: 30px 0 10px 0;
 }
 
-.special-bullet {
+.pricing {
+    padding: 5%;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.recommended {
+    border: #418414 3px solid;
+}
+
+.special-bullet, .special-bullet-dark, .plus-bullet {
     list-style: none;
 }
 
 .special-bullet li::marker {
     content: "➔  ";
     color: #fff;
+    font-size: 1em;
+}
+
+.special-bullet-dark li::marker {
+    content: "➔  ";
+    color: #418414;
+    font-size: 1em;
+}
+
+.plus-bullet li::marker {
+    content: url(images/bullet.svg);
+}
+
+.plus-bullet li {
     font-size: 1em;
 }
 
