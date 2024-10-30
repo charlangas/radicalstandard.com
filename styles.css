@@ -357,6 +357,54 @@ li {
     height: 100px;
 }
 
+/* ==== Case Study Sequences ==== */
+
+.container2 {
+    width: 100%;
+    margin-top: 60px; /* Set the top margin for the container */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center contents horizontally */
+}
+
+.sequence {
+    max-width: 600px; /* Set the max width for the sequence div */
+    width: 100%; /* Allow it to use full width up to max-width */
+    margin: 0 auto; /* Center the sequence div within the container */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items in a column */
+    padding: 0 15px; /* Optional: Add some horizontal padding for aesthetics */
+}
+
+.sequence p {
+    margin-bottom: 20px;
+}
+.sequence img {
+    margin-bottom: 50px; /* Space between items */
+}
+
+.sequence img {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    border-radius: 42px;
+}
+
+#nexhealth img {
+    border-radius: 0px;
+}
+
+/* Remove the bottom margin from the last item */
+.sequence p:last-child,
+.sequence img:last-child {
+    margin-bottom: 0; /* Prevent extra space below the last item */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sequence {
+        width: 90%; /* Take 90% of the viewport width on small screens */
+    }
+}
+
+
 /* =========== MEDIA QUERIES ============ */
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
     h1 {
