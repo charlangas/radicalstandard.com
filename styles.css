@@ -387,10 +387,6 @@ li {
     border-radius: 42px;
 }
 
-#nexhealth img {
-    border-radius: 0px;
-}
-
 /* Remove the bottom margin from the last item */
 .sequence p:last-child,
 .sequence img:last-child {
